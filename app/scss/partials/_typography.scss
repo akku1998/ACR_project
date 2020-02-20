@@ -1,0 +1,34 @@
+h2 {
+    font-size: rem(28px);
+    font-weight: 500;
+    color: $color-gray;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: $heading-font;
+}
+h3 {
+    font-size: rem(21px);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    font-family: $heading-font;
+}
+h4 {
+    font-size: rem(18px);
+    line-height: 21px;
+    font-weight: 500;
+    color: $color-gray;
+    font-family: $heading-font;
+}
+h5 {
+    font-size: rem(16px);
+    font-weight: 300;
+    color: $color-gray;
+    line-height: rem(18px);
+    font-family: $heading-font;
+}
+h6 {
+    font-family: $base-font;
+    font-size: rem(14px);
+    color: $color-gray;
+}
