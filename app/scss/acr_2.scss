@@ -1,0 +1,86 @@
+/************* ACR_2.scss *********************/
+/************* My ACR *******************/
+
+@mixin heading-3{
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000000;
+}
+%buttons-style{
+			max-width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+main{
+	width: 100%;
+	margin-left: 388px;
+	margin-top: 100px;
+	z-index: 1;
+	/*padding: 10px 10px;*/
+	h3{
+		@include heading-3;
+		padding: 30px 30px;
+		border-bottom: 1px solid #E2E2E2;
+		margin-bottom: 0;
+	}
+	.list-unstyled{
+		margin: 0;
+		padding: 0;
+		.media{
+			padding: 30px 30px;
+			border-bottom: 1px solid #E2E2E2;
+			img{
+				max-width: 70px;
+				height: auto;
+				border: 1px solid #000;
+				border-radius: 50%;
+			}
+			.media-body{
+				h5{
+					@include heading-3;
+					margin-bottom: 20px;
+					/*font-weight: bold;
+					font-size: 18px;*/
+				}
+				.media-body-info{
+					&:nth-child(3){
+						padding: 20px 0;
+					}
+					&:last-child{
+						p{
+							font-weight: bold;
+						}
+						
+					}
+					p{
+						font-size: 14px;
+						text-transform: uppercase;
+						color: #333333;
+						span{
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+			.media-icons{
+				position: relative;
+				.succes-icon{
+					img{
+						border: none;
+					}	
+				}
+				.failer-icon{
+					position: absolute;
+					top: 0;
+					display: none;
+					img{
+						border: none;
+					}
+				}
+			}
+		}
+	}
+
+}
