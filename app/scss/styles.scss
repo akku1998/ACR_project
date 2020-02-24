@@ -2,6 +2,8 @@
 @import 'partials/variables';
 @import '../../node_modules/sass-rem/rem';
 @import 'partials/base';
+@import 'partials/mixins';
+@import 'partials/extend';
 /*@import 'partials/typography';*/
 @import 'components/header';
 @import 'components/aside';

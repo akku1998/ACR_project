@@ -1,0 +1,71 @@
+@mixin main-header-size{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 30px;
+	border-bottom: 1px solid #E2E2E2;
+}
+@mixin heading-3{
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000000;
+}
+@mixin label-style-text{
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 20px;
+}
+@mixin form-placeholder{
+	font-size: 12px;
+	padding: 10px;
+	color: #000;
+}
+
+@mixin media-icons-styling{
+	position: relative;
+	.succes-icon{
+		img{
+			border: none;
+		}
+	}
+	.failer-icon{
+		position: absolute;
+		top: 0;
+		display: none;
+		img{
+			border: none;
+		}
+	}	
+}
+@mixin form-group-element{
+	label{
+		@include label-style-text;
+			/*margin-top: 20px;*/
+		}
+		.form-control{
+			border-radius: 0;
+		}
+		.form-textarea::placeholder{
+			@include form-placeholder;
+		}
+}
+@mixin media-body-info{
+	.media-body-info{
+			padding-bottom: 20px;
+		&:last-child{
+			p{
+				font-weight: bold;
+			}
+			
+		}
+		p{
+			font-size: 14px;
+			text-transform: uppercase;
+			color: #333333;
+			span{
+				padding: 0 5px;
+			}
+		}
+	}
+}

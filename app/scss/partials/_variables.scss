@@ -12,3 +12,16 @@ $header-bgcolor: #F4F4F4;
 $dark-gray: #626262;
 $color-gray: #757575;
 $font-family: 'Montserrat', sans-serif;
+
+$pale-green-btn: #04CDB5;
+$blue-btn: #048CCD;
+
+//Breakpoints
+
+$breakpoint-sm-mobile: (max-width: 480px);
+$breakpoint-mobile: (max-width: 767px);
+$breakpoint-tablet-min: (min-width: 992px);
+$breakpoint-tablet-max: (max-width: 992px);
+$breakpoint-tablet: "(min-width: 768px) and (max-width: 991px)";
+$breakpoint-desktop: "(min-width: 1024px) and (max-width: 1160px)";
+$breakpoint-desktop-max: "(min-width: 1200px)";
