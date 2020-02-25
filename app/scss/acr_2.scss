@@ -2,17 +2,19 @@
 /************* My ACR *******************/
 
 
-/*%buttons-style{
-			max-width: 50px;
-			height: 50px;
-			border-radius: 50%;
-		}*/
+
 
 main{
 	width: 100%;
 	margin-left: 388px;
 	margin-top: 83px;
 	z-index: 1;
+	    @media #{$breakpoint-mobile}{
+        display: block;
+        width: 100%;
+        margin-left: 0;
+		margin-top: 0;
+    }
 	/*padding: 10px 10px;*/
 	.main-header-sec{
 		@include main-header-size;

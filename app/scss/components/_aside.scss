@@ -1,5 +1,9 @@
 /*$screen-line: #E2E2E2;*/
-
+/*  @media #{$breakpoint-mobile}{
+    aside{
+        display: none;
+        }
+    }*/
 aside{
     height: 100vh;
     border-right: 1px solid $screen-line;
@@ -7,8 +11,12 @@ aside{
     top: 0;
     left: 0;
     text-align: center;
-    padding: 181px 20px 0 20px;
+    /*padding: 181px 20px 0 20px;*/
+    padding: 94px 20px 0 20px;
     z-index: 3;
+    @media #{$breakpoint-mobile}{
+        display: none;
+    }
     .aside_logo{
 		text-align: center;
 		img{
@@ -33,17 +41,19 @@ aside{
     		a{
     			color:#fff;
     			&:link{
-					background: #048CCD;
+					background: $aside-button-link;
 					border-radius: 20px;
 					padding: 10px 40px;
 					color: #fff;
 					font-size: 14px;
 					text-decoration: none;
+                    transition: color .8s;
 					&:hover{
 						text-decoration: none;
 						cursor: pointer;
 						color: #fff;
-					}
+                        background-color: darken($aside-button-link, 15%);
+			     	}
     			}
     		}
     	}

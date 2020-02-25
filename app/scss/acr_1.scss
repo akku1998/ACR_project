@@ -2,6 +2,7 @@
 /******** Form elements *********/
 
 main{
+
 	.form{
 		padding: 30px 30px;
 		.form-group{
@@ -45,18 +46,24 @@ main{
 						color:#000;
 					}
 				}
+			}	
+		}
+		.form-buttons{
+			.btn-save{
+				@extend %btn-placeholder;
+				background-color: $pale-green-btn;
+				&:hover{
+					background-color: darken($pale-green-btn, 15%);
+				}
 			}
-
-			
-		}
-		.save-btn{
+		.btn-submit{
 			@extend %btn-placeholder;
-			background-color: $pale-green-btn;
+			background-color: $blue-btn;
+			&:hover{
+				background-color: lighten($blue-btn, 15%);
+			}
 		}
-		.submit-btn{
-			@extend %btn-placeholder;
-			background-color: #048CCD;
-		}
+	}
 		
 	}
 }
