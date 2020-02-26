@@ -10,11 +10,16 @@
 	font-size: 18px;
 	text-transform: uppercase;
 	color: #000000;
+	margin-bottom: 0;
+	letter-spacing: 0.5px;
 }
 @mixin label-style-text{
-	font-size: 18px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
 	color: #000;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+	letter-spacing: 0.5px;
 }
 @mixin form-placeholder{
 	font-size: 12px;

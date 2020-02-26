@@ -4,19 +4,9 @@
 
 
 
-main{
-	width: 100%;
-	margin-left: 388px;
-	margin-top: 83px;
-	z-index: 1;
-	    @media #{$breakpoint-mobile}{
-        display: block;
-        width: 100%;
-        margin-left: 0;
-		margin-top: 0;
-    }
-	/*padding: 10px 10px;*/
-	.main-header-sec{
+
+	   
+.main-header-sec{
 		@include main-header-size;
 		.heading{
 			padding: 10px 0;
@@ -36,22 +26,12 @@ main{
 				padding: 5px 15px;
     			border: 2px solid #ccccccf7;
     			border-radius: 5px;
-    			/*-webkit-appearance: none;*/
-/*    			&::after{
-					content: "f0d7";
-					position: absolute;
-					right: 0;
-					top: 0;
-					width: 50px;
-					height: 50px;
-					background: #000;
-    			}*/
 			}
 		}
 
-	}
+}
 
-	.list-unstyled{
+.list-unstyled{
 		margin: 0;
 		padding: 0;
 		.media{
@@ -74,6 +54,5 @@ main{
 				@include media-icons-styling;
 			}
 		}
-	}
-
 }
+

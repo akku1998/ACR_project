@@ -1,9 +1,4 @@
-/*$screen-line: #E2E2E2;*/
-/*  @media #{$breakpoint-mobile}{
-    aside{
-        display: none;
-        }
-    }*/
+
 aside{
     height: 100vh;
     border-right: 1px solid $screen-line;
@@ -11,11 +6,17 @@ aside{
     top: 0;
     left: 0;
     text-align: center;
-    /*padding: 181px 20px 0 20px;*/
     padding: 94px 20px 0 20px;
     z-index: 3;
+    -webkit-transform: none;
+    transform: none;
+    transition: transform 300ms linear;
+
+
     @media #{$breakpoint-mobile}{
-        display: none;
+        transform: translateX(-100%);
+        transition: transform 300ms linear;
+        /*display: none;*/        
     }
     .aside_logo{
 		text-align: center;
@@ -23,10 +24,12 @@ aside{
 			max-width: 150px;
 			height: auto;
 			border-radius: 50%;
-			border: 1px solid #000
+			border: 1px solid #000;
+            transition: 0.3s;
 		}
     }
     .user-short-description{
+        transition: 0.3s;
     	h3{
     		@include heading-3;
     	}
@@ -59,6 +62,7 @@ aside{
     	}
     }
     .user-short-description-two{
+        transition: 0.3s;
     	margin: 20px 0;
     	display: flex;
     	flex-direction: row;
@@ -79,7 +83,7 @@ aside{
 					font-size: 14px;
 					font-weight: bold;
 					margin-bottom: 0;
-					padding: 0 10px;
+					padding: 0 15px;
 					&:first-child{
 						padding-right: 0;
 					}
@@ -93,6 +97,7 @@ aside{
     	}
     }
     .footer-logo{
+        transition: 0.3s;
     	position: absolute;
     	bottom: 4%;
     	left: 35%;

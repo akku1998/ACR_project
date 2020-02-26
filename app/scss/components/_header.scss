@@ -4,7 +4,7 @@ header{
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 20px;
+	/*padding: 10px 20px;*/
 	background: $header-bgcolor;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 	position: fixed;
@@ -13,43 +13,62 @@ header{
 		display: flex;
 		justify-content: space-around;
     }
-	.logo{
+/*	.logo{
 		max-width: 163px;
 		height: auto;
 		    @media #{$breakpoint-mobile}{
-				order: 2;
+				/*order: 2;*/
 				/*max-width: 100%;
 				height: auto;*/
-    	}
-	}
+/*    	}
+	}*/
+
 	.navbar{
 			flex: 1;
-			/*justify-content: center;*/
+			background: $header-bgcolor !important;
+			
 				@media #{$breakpoint-mobile}{
-				order: 1;
-    		}
+			}
 			.navbar-collapse{
 				justify-content: center;
-				padding: 10px 10px;
-				.navbar-nav{
+				@media #{$breakpoint-mobile}{
+					border-top: 1px solid #292b31;
+				}
+					.navbar-nav{
+						text-align: center;
+						.nav-item{
+							list-style: outside none none;
+    						padding: 0px 11px;
+						}
 					.nav-link{
-					font-weight: bold;
-					font-size: 14px;
-					text-transform: uppercase;
-					padding: 0 16px;
-					color: #000;
+					    font-weight: bold;
+					    font-size: 14px;
+					    padding: 0px;
+					    height: 40px;
+					    line-height: 40px;
+					    position: relative;
+					    display: inline-block;
+					    color: #1d1f24;
+					    text-transform: uppercase;
+					@media #{$breakpoint-mobile}{
+						height: auto;
+					    margin: 0 auto;
+					    line-height: 0px;
+					    padding: 20px 0px;
+					    font-size: 14px;		
+    					}
 						&::after{
 							content: '';
 							display: block;
 							width: 0;
-							height: 2px;
-							background: #00448b;
+							height: 3px;
+							background: #048CCD;
 							transition: width .3s;	
-							margin-top: 10px;				
+							margin-top: 10px;			
 						}
 						&:hover::after{
 							width: 100%;
-							transition: width .3s;
+							transition: all .3s ease;
 						}
 					}
 				}
@@ -62,7 +81,8 @@ header{
 		max-width: 20%;
 		padding: 0 19px;
 			@media #{$breakpoint-mobile}{
-				order: 3;
+				/*order: 3;*/
+				margin: auto;
     		}
 		h3{
 			@include heading-3;
