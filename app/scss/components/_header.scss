@@ -38,7 +38,16 @@ header{
 						text-align: center;
 						.nav-item{
 							list-style: outside none none;
-    						padding: 0px 11px;
+    						padding: 0px 10px;
+    						@media #{$breakpoint-tablet}{
+    							padding-right: 10px;
+    							&:last-child{
+    								padding-right: 0;
+    							}
+    						}
+    						@media #{$breakpoint-tablet-min}{
+    							padding: 0px 20px;
+							}
 						}
 					.nav-link{
 					    font-weight: bold;
@@ -75,11 +84,14 @@ header{
 			}
 		}	
 	.user-drop-down{
-
 		display: flex;
 		align-items: center;
 		max-width: 20%;
 		padding: 0 19px;
+			@media #{$breakpoint-desktop-max}{
+				max-width: 20%;
+				padding: 0 19px;
+			}
 			@media #{$breakpoint-mobile}{
 				/*order: 3;*/
 				margin: auto;
@@ -87,6 +99,10 @@ header{
 		h3{
 			@include heading-3;
 			display: inline-block;
+			color: #1d1f24;
+			@media #{$breakpoint-tablet}{
+    			font-size: 14px;
+    		}
 		}
 		img{
 			max-width: 43px;

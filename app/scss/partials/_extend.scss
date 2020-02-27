@@ -5,4 +5,7 @@
 	line-height: 15px;
 	color: #fff;
 	margin-right: 10px;
-	}
+	@media #{$breakpoint-tablet-max} {
+		padding: 15px 90px;
+    }
+}

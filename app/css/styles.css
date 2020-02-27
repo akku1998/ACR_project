@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -68,6 +68,9 @@ body {
   line-height: 15px;
   color: #fff;
   margin-right: 10px; }
+  @media (max-width: 992px) {
+    .form .form-buttons .btn-save, .form .form-buttons .btn-submit, .feedback-section .form-buttons .btn-save, .feedback-section .form-buttons .btn-submit {
+      padding: 15px 90px; } }
 
 /*@import 'partials/typography';*/
 header {
@@ -105,7 +108,15 @@ header {
         text-align: center; }
         header .navbar .navbar-collapse .navbar-nav .nav-item {
           list-style: outside none none;
-          padding: 0px 11px; }
+          padding: 0px 10px; }
+          @media (min-width: 768px) and (max-width: 991px) {
+            header .navbar .navbar-collapse .navbar-nav .nav-item {
+              padding-right: 10px; }
+              header .navbar .navbar-collapse .navbar-nav .nav-item:last-child {
+                padding-right: 0; } }
+          @media (min-width: 992px) {
+            header .navbar .navbar-collapse .navbar-nav .nav-item {
+              padding: 0px 20px; } }
         header .navbar .navbar-collapse .navbar-nav .nav-link {
           font-weight: bold;
           font-size: 14px;
@@ -139,6 +150,10 @@ header {
     align-items: center;
     max-width: 20%;
     padding: 0 19px; }
+    @media (min-width: 1200px) {
+      header .user-drop-down {
+        max-width: 20%;
+        padding: 0 19px; } }
     @media (max-width: 767px) {
       header .user-drop-down {
         /*order: 3;*/
@@ -150,7 +165,11 @@ header {
       color: #000000;
       margin-bottom: 0;
       letter-spacing: 0.5px;
-      display: inline-block; }
+      display: inline-block;
+      color: #1d1f24; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        header .user-drop-down h3 {
+          font-size: 14px; } }
     header .user-drop-down img {
       max-width: 43px;
       height: auto;
@@ -246,7 +265,7 @@ aside {
         aside .user-short-description-two .experience-out p span {
           display: block;
           font-weight: normal;
-          padding-top: 10px; }
+          padding-top: 15px; }
   aside .footer-logo {
     transition: 0.3s;
     position: absolute;
@@ -271,7 +290,10 @@ main {
 /***** acr_1.scss ****************/
 /******** Form elements *********/
 .form {
-  padding: 40px 40px; }
+  padding: 40px 40px;
+  /*		@media (max-width: 767px) {
+			width: 55%;
+		}*/ }
   .form .form-group {
     margin-bottom: 2rem; }
     .form .form-group label {
@@ -280,18 +302,15 @@ main {
       text-transform: uppercase;
       color: #000;
       margin-bottom: 15px;
-      letter-spacing: 0.5px;
-      /*margin-top: 20px;*/ }
+      letter-spacing: 0.5px; }
     .form .form-group .form-control {
       border-radius: 0; }
     .form .form-group .form-textarea::placeholder {
       font-size: 12px;
       padding: 10px;
       color: #000; }
-    .form .form-group .select_option {
-      padding: 20px 0; }
-      .form .form-group .select_option option {
-        font-size: 12px; }
+    .form .form-group select option {
+      font-size: 14px; }
     .form .form-group .form-attachment input[type="file"] {
       display: none; }
     .form .form-group .form-attachment p {
@@ -314,23 +333,38 @@ main {
       font-size: 14px;
       font-weight: normal;
       letter-spacing: 0.5px;
-      text-transform: capitalize;
-      /*line-height: 60px;*/ }
-    .form .form-group .form-ch eck {
+      text-transform: capitalize; }
+      @media (max-width: 767px) {
+        .form .form-group .form-attachment label {
+          width: 55%; } }
+    .form .form-group .form-check {
       padding: 10px 0 10px 1.25rem; }
-      .form .form-group .form-ch eck .form-check-input {
+      .form .form-group .form-check input[type="checkbox"] {
         margin-top: .2rem;
         border: 1px solid #DADADA; }
-        .form .form-group .form-ch eck .form-check-input label {
-          font-size: 12px;
-          color: #000;
-          font-weight: normal; }
+      .form .form-group .form-check label {
+        font-size: 14px;
+        color: #000;
+        font-weight: normal;
+        text-transform: capitalize; }
   .form .form-buttons .btn-save {
     background-color: #04CDB5; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .form .form-buttons .btn-save {
+        padding: 10px 70px; } }
+    @media (max-width: 767px) {
+      .form .form-buttons .btn-save {
+        padding: 10px 70px; } }
     .form .form-buttons .btn-save:hover {
       background-color: #038273; }
   .form .form-buttons .btn-submit {
     background-color: #048CCD; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .form .form-buttons .btn-submit {
+        padding: 10px 70px; } }
+    @media (max-width: 767px) {
+      .form .form-buttons .btn-submit {
+        padding: 10px 70px; } }
     .form .form-buttons .btn-submit:hover {
       background-color: #23b5fb; }
 
@@ -340,7 +374,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 40px;
   border-bottom: 1px solid #E2E2E2; }
   .main-header-sec .heading {
     padding: 10px 0; }
@@ -373,26 +407,36 @@ main {
       height: auto;
       border: 1px solid #000;
       border-radius: 50%; }
-    .list-unstyled .media .media-body h5 {
-      font-weight: bold;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #000000;
-      margin-bottom: 0;
-      letter-spacing: 0.5px;
-      margin-bottom: 20px; }
-    .list-unstyled .media .media-body .media-body-info {
-      padding-bottom: 20px; }
-      .list-unstyled .media .media-body .media-body-info:last-child p {
-        font-weight: bold; }
-      .list-unstyled .media .media-body .media-body-info p {
-        font-size: 14px;
+    .list-unstyled .media .media-body {
+      padding-top: 10px; }
+      .list-unstyled .media .media-body h5 {
+        font-weight: bold;
+        font-size: 18px;
         text-transform: uppercase;
-        color: #333333;
-        font-weight: 600; }
-        .list-unstyled .media .media-body .media-body-info p span {
-          padding: 0 5px; }
+        color: #000000;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px; }
+      .list-unstyled .media .media-body .media-body-info {
+        padding-bottom: 20px; }
+        @media (max-width: 767px) {
+          .list-unstyled .media .media-body .media-body-info {
+            padding-bottom: 0; }
+            .list-unstyled .media .media-body .media-body-info p {
+              display: block;
+              margin-bottom: 20px; } }
+        .list-unstyled .media .media-body .media-body-info:last-child p span {
+          font-weight: bold;
+          text-transform: capitalize; }
+        .list-unstyled .media .media-body .media-body-info p {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #333333;
+          letter-spacing: 0.5px; }
+          .list-unstyled .media .media-body .media-body-info p span {
+            padding: 0 5px; }
     .list-unstyled .media .media-icons {
+      padding-top: 10px;
       position: relative; }
       .list-unstyled .media .media-icons .succes-icon img {
         border: none; }
@@ -406,46 +450,61 @@ main {
 /************ ACR_3 *******************/
 /************ Media elements ***********/
 .media {
-  padding: 20px 30px; }
+  padding: 20px 40px 0 40px; }
   .media img {
     max-width: 70px;
     height: auto;
     border: 1px solid #000;
     border-radius: 50%; }
-  .media .media-body h5 {
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 0;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px; }
-  .media .media-body .media-body-info {
-    padding-bottom: 20px; }
-    .media .media-body .media-body-info:last-child p {
-      font-weight: bold; }
-    .media .media-body .media-body-info p {
-      font-size: 14px;
+  .media .media-body {
+    padding: 20px 0; }
+    .media .media-body h5 {
+      font-weight: bold;
+      font-size: 18px;
       text-transform: uppercase;
-      color: #333333;
-      font-weight: 600; }
-      .media .media-body .media-body-info p span {
-        padding: 0 5px; }
-  .media .media-body .form-group label {
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    /*margin-top: 20px;*/ }
-  .media .media-body .form-group .form-control {
-    border-radius: 0; }
-  .media .media-body .form-group .form-textarea::placeholder {
-    font-size: 12px;
-    padding: 10px;
-    color: #000; }
+      color: #000000;
+      margin-bottom: 0;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px; }
+    .media .media-body .media-element {
+      padding: 5px 0; }
+      .media .media-body .media-element .media-body-info {
+        padding-bottom: 20px; }
+        @media (max-width: 767px) {
+          .media .media-body .media-element .media-body-info {
+            padding-bottom: 0; }
+            .media .media-body .media-element .media-body-info p {
+              display: block;
+              margin-bottom: 20px; } }
+        .media .media-body .media-element .media-body-info:last-child p span {
+          font-weight: bold;
+          text-transform: capitalize; }
+        .media .media-body .media-element .media-body-info p {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #333333;
+          letter-spacing: 0.5px; }
+          .media .media-body .media-element .media-body-info p span {
+            padding: 0 5px; }
+    .media .media-body .form-group {
+      margin-bottom: 2rem; }
+      .media .media-body .form-group label {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px; }
+      .media .media-body .form-group .form-control {
+        border-radius: 0; }
+      .media .media-body .form-group .form-textarea::placeholder {
+        font-size: 12px;
+        padding: 10px;
+        color: #000; }
+      .media .media-body .form-group:nth-child(2) {
+        margin-bottom: 0; }
   .media .media-icons {
+    padding: 20px 0;
     position: relative; }
     .media .media-icons .succes-icon img {
       border: none; }
@@ -457,7 +516,7 @@ main {
         border: none; }
 
 .feedback-section {
-  padding: 20px 30px; }
+  padding: 20px 40px; }
   .feedback-section .feedback-section-one {
     display: block; }
     .feedback-section .feedback-section-one .form-check-inline {
@@ -465,7 +524,7 @@ main {
   .feedback-section .feedback-section-two {
     margin: 20px 0; }
     .feedback-section .feedback-section-two .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
       padding-right: 10px; }
       .feedback-section .feedback-section-two .form-group label {
         font-size: 14px;
@@ -480,14 +539,20 @@ main {
         font-size: 12px;
         padding: 10px;
         color: #000; }
-      .feedback-section .feedback-section-two .form-group .select_option option {
-        font-size: 12px; }
+      .feedback-section .feedback-section-two .form-group select option {
+        font-size: 14px; }
   .feedback-section .form-buttons .btn-save {
     background-color: #04CDB5; }
+    @media (min-width: 1200px) {
+      .feedback-section .form-buttons .btn-save {
+        padding: 15px 90px; } }
     .feedback-section .form-buttons .btn-save:hover {
       background-color: #038273; }
   .feedback-section .form-buttons .btn-submit {
     background-color: #048CCD; }
+    @media (min-width: 1200px) {
+      .feedback-section .form-buttons .btn-submit {
+        padding: 15px 90px; } }
     .feedback-section .form-buttons .btn-submit:hover {
       background-color: #23b5fb; }
 
