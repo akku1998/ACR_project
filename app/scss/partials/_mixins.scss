@@ -2,33 +2,33 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 15px 40px;
+	padding: rem(15px 40px);
 	border-bottom: 1px solid #E2E2E2;
 }
 @mixin heading-3{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: rem(18px);
 	text-transform: uppercase;
 	color: #000000;
 	margin-bottom: 0;
 	letter-spacing: 0.5px;
 }
 @mixin label-style-text{
-	font-size: 14px;
+	font-size: rem(14px);
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #000;
-	margin-bottom: 15px;
+	margin-bottom: rem(15px);
 	letter-spacing: 0.5px;
 }
 @mixin form-placeholder{
-	font-size: 12px;
-	padding: 10px;
+	font-size: rem(12px);
+	padding: rem(10px);
 	color: #000;
 }
 @mixin form-select-options{
 	option{
-		font-size: 14px;
+		font-size: rem(14px);
 	}
 }
 @mixin media-icons-styling{
@@ -45,6 +45,9 @@
 		img{
 			border: none;
 		}
+		@media #{$breakpoint-tablet}{
+			top: 20px;
+		}
 	}	
 }
 @mixin form-group-element{
@@ -59,8 +62,8 @@
 		}
 }
 @mixin media-body-info{
-
 	.media-body-info{
+		padding-bottom: 20px;
 		@media #{$breakpoint-mobile} {
 			padding-bottom: 0;
 			p{
@@ -68,7 +71,9 @@
 				margin-bottom: 20px;
 			}
 		}
-		padding-bottom: 20px;
+		@media #{$breakpoint-tablet}{
+			padding-bottom: 0;
+		}
 		&:last-child{
 			p{
 				span{ 
@@ -78,10 +83,13 @@
 			}	
 		}
 		p{
-			font-size: 14px;
+			font-size: rem(14px);
 			text-transform: uppercase;
 			color: #333333;
 			letter-spacing: 0.5px;
+			@media #{$breakpoint-tablet}{
+				margin-bottom: 17px;
+			}
 			span{
 				padding: 0 5px;
 			}

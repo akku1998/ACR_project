@@ -8,7 +8,7 @@
 				
 			}
 		.heading{
-			padding: 10px 0;
+			padding: rem(10px 0);
 			h3{
 				@include heading-3;
 				margin-bottom: 0;
@@ -17,12 +17,12 @@
 		.header-select{
 			span{
 				font-weight: bold;
-				font-size: 14px;
-				padding-right: 5px;
+				font-size: rem(14px);
+				padding-right: rem(5px);
 			}
 			select{
 				position: relative;
-				padding: 5px 15px;
+				padding: rem(5px 15px);
     			border: 2px solid #ccccccf7;
     			border-radius: 5px;
 			}
@@ -33,27 +33,37 @@
 .list-unstyled{
 		margin: 0;
 		padding: 0;
-		.media{
-			padding: 30px 30px;
-			border-bottom: 1px solid #E2E2E2;
-			img{
-				max-width: 70px;
-				height: auto;
-				border: 1px solid #000;
-				border-radius: 50%;
-			}
-			.media-body{
-				padding-top: 10px;
-				h5{
-					@include heading-3;
-					margin-bottom: 20px;
-				}
-				@include media-body-info;
-			}
-			.media-icons{
-				padding-top: 10px;
-				@include media-icons-styling;
-			}
+	.media{
+		padding: rem(30px 30px);
+		border-bottom: 1px solid $screen-line;
+		@media #{$breakpoint-tablet} {
+			display: flex;
+			flex-direction: column;
+			position: relative;
 		}
+		img{
+			max-width: 70px;
+			height: auto;
+			border: 1px solid #000;
+			border-radius: 50%;
+		}
+		.media-body{
+			padding: rem(20px 0);
+			h5{
+				@include heading-3;
+				margin-bottom: rem(20px);
+			}
+			@include media-body-info;
+		}
+		.media-icons{
+			padding: rem(20px 0);
+			@include media-icons-styling;
+				@media #{$breakpoint-tablet}{
+					position: absolute;
+					top: 0;
+					right: 37px;
+				}
+			}
+	}
 }
 

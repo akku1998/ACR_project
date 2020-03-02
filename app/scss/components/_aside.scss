@@ -6,7 +6,7 @@ aside{
     top: 0;
     left: 0;
     text-align: center;
-    padding: 94px 20px 0 20px;
+    padding: rem(94px 20px 0 20px);
     z-index: 3;
     -webkit-transform: none;
     transform: none;
@@ -35,27 +35,28 @@ aside{
     	}
     	p{
     		font-weight: normal;
-			font-size: 14px;	
+			font-size: rem(14px);	
 			color: #878787;
-			margin: 15px 0;
+			margin: rem(15px 0);
     	}
     	.button{
 
     		a{
     			color:#fff;
     			&:link{
-					background: $aside-button-link;
+					/*background: $aside-button-link;*/
 					border-radius: 20px;
-					padding: 10px 40px;
+					padding: rem(10px 40px);
 					color: #fff;
-					font-size: 14px;
+					font-size: rem(18px);
 					text-decoration: none;
                     transition: color .8s;
+                    background-image: linear-gradient(to right, #12D8FA -19%, #1FA2FF 100%);
 					&:hover{
 						text-decoration: none;
 						cursor: pointer;
 						color: #fff;
-                        background-color: darken($aside-button-link, 15%);
+                        /*background-position: right center;*/
 			     	}
     			}
     		}
@@ -63,7 +64,7 @@ aside{
     }
     .user-short-description-two{
         transition: 0.3s;
-    	margin: 20px 0;
+    	margin: rem(20px 0);
     	display: flex;
     	flex-direction: row;
     	flex-wrap: wrap;
@@ -72,25 +73,25 @@ aside{
     	.experience-out{
     		display: flex;
     		flex-direction: column;
-    		padding: 10px;
-    		font-size: 14px;
+    		padding: rem(10px);
+    		font-size: rem(14px);
   			text-align: center;
   			border-right: 1px solid $screen-line;
 				&:last-child{
 					border-right: none;
 				}
 				p{
-					font-size: 14px;
+					font-size: rem(14px);
 					font-weight: bold;
 					margin-bottom: 0;
-					padding: 0 15px;
+					padding: rem(0 15px);
 					&:first-child{
 						padding-right: 0;
 					}
 					& span{
 						display: block;
 						font-weight: normal;
-						padding-top: 15px;
+						padding-top: rem(15px);
 					}
 				}
 

@@ -3,6 +3,7 @@ main{
 	margin-left: 403px;
 	margin-top: 83px;
 	z-index: 1;
+	overflow: hidden;
 	    @media #{$breakpoint-mobile}{
         display: block;
         width: 100%;
