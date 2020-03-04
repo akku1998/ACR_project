@@ -16,10 +16,10 @@ header{
 	.navbar{
 			flex: 1;
 			background: $header-bgcolor !important;
-			
+			padding: 0 1rem;
 				@media #{$breakpoint-mobile}{
 					.navbar-toggler-icon{
-						background: blue;
+						background: #000;
 						height: 3px;
 						transition: .5s;
 						position: relative;
@@ -30,7 +30,7 @@ header{
 						    left: 0px;
 						    width: 30px;
 						    height: 3px;
-						    background: blue;
+						    background: #000;
 						    transition: .3s;
 						}
 						&:after{
@@ -40,11 +40,11 @@ header{
 						    left: 0px;
 						    width: 30px;
 						    height: 3px;
-						    background: blue;
+						    background: #000;
 						    transition: .3s;
 						}
 					}
-					&:active .navbar-toggler .navbar-toggler-icon{
+/*					&:active .navbar-toggler .navbar-toggler-icon{
 						background: rgba(0,0,0,0);
 						&::before{
 							top: 0;
@@ -65,19 +65,28 @@ header{
 							top: 0;
 							transform: rotate(135deg);
 						}
-					}
+					}*/
 			}
+/*			.navigation-sec{
+				@media #{$breakpoint-mobile}{
+					display: flex;
+					flex-direction: column-reverse;
+				}
+			}*/
 			.navbar-collapse{
 				justify-content: center;
 				@media #{$breakpoint-mobile}{
 					border-top: 1px solid #292b31;
 				}
-					.navbar-nav{
+				.navbar-nav{
 						text-align: center;
 						position: relative;
 						.nav-item{
 							list-style: outside none none;
     						margin: 0px 10px;
+ /*   						&.active{
+    							background-color: blue;
+    						}*/
     						@media #{$breakpoint-tablet}{
     							/*padding-right: 10px;*/
     							&:last-child{
@@ -89,16 +98,20 @@ header{
 							}
 						}
 						#line{
+							
 							position: absolute;
-						    top: 40px;
+						    top: 50px;
 						    left: 17px;
 						    width: 130px;
-						    height: 3px;
+						    height: 5px;
 						    transition: all 600ms ease;
 						    background-color: #048CCD;
 						    @media #{$breakpoint-tablet}{
 						    	left: 0;
 						    	width: 120px;
+						    }
+						    @media #{$breakpoint-mobile}{
+						    	display: none;
 						    }
 						}
 						li:nth-child(2):hover ~ #line{
@@ -142,11 +155,18 @@ header{
 					    line-height: 0px;
 					    padding: 20px 0px;
 					    font-size: rem(14px);		
-    					}
-					}
+    				}
 				}
 			}
-		}	
+
+			&.show {
+				.navgation-sec{
+					display: flex;
+					flex-direction: column-reverse;
+				}	
+			}
+		}
+	}	
 	.user-drop-down{
 		display: flex;
 		align-items: center;

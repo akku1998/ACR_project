@@ -6,12 +6,14 @@ aside{
     top: 0;
     left: 0;
     text-align: center;
-    padding: rem(94px 20px 0 20px);
+    padding: rem(0 20px);
     z-index: 3;
     -webkit-transform: none;
     transform: none;
     transition: transform 300ms linear;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media #{$breakpoint-mobile}{
         transform: translateX(-100%);

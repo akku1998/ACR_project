@@ -63,7 +63,7 @@
 }
 @mixin media-body-info{
 	.media-body-info{
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 		@media #{$breakpoint-mobile} {
 			padding-bottom: 0;
 			p{
@@ -95,4 +95,10 @@
 			}
 		}
 	}
+}
+@mixin icons-styling{
+	max-width: 70px;
+	height: auto;
+	border: 1px solid #000;
+	border-radius: 50%;
 }

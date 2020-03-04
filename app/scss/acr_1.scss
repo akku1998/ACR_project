@@ -45,7 +45,7 @@
 				}
 			}
 			.form-check{
-				padding: 10px 0 10px 1.25rem;
+				/*padding: 10px 0 10px 1.25rem;*/
 				input[type="checkbox"]{
 					margin-top: .2rem;
 					border: 1px solid #DADADA;
@@ -59,29 +59,48 @@
 				}	
 			}
 		.form-buttons{
+			.btn{
+				color: #fff;
+				border: none;
+			    font-family: inherit;
+			    font-size: inherit;
+			    color: inherit;
+			    background: none;
+			    cursor: pointer;
+			    padding: 25px 80px;
+			    display: inline-block;
+			    margin: 15px 30px;
+			    text-transform: uppercase;
+			    letter-spacing: 1px;
+			    font-weight: 700;
+			    outline: none;
+			    position: relative;
+			    -webkit-transition: all 0.3s;
+			    -moz-transition: all 0.3s;
+			    transition: all 0.3s;
+			    border-radius: 0 0 5px 5px;
+			}
 			.btn-save{
-				@extend %btn-placeholder;
-				background-color: $pale-green-btn;
-				@media #{$breakpoint-tablet} {
-					padding: rem(10px 70px);
-			    }
-			    @media #{$breakpoint-mobile}{
-					padding: rem(10px 70px); }
+				/*@extend %btn-placeholder;*/
+				box-shadow: 0 6px #4CB8C4;
+
+				background-image: linear-gradient(to right, #3CD3AD 19%, #4CB8C4 100%);
+					@media #{$breakpoint-desktop-max} {
+						  padding: 15px 80px;
+				    }
 				&:hover{
 					background-color: darken($pale-green-btn, 15%);
 				}
 			}
-		.btn-submit{
-			@extend %btn-placeholder;
-			background-color: $blue-btn;
-				@media #{$breakpoint-tablet} {
-					padding: rem(10px 70px);
-			    }
-			    @media #{$breakpoint-mobile}{
-					padding: rem(10px 70px);
-			    }
-			&:hover{
-				background-color: lighten($blue-btn, 15%);
+			.btn-submit{
+				/*@extend %btn-placeholder;*/
+				box-shadow: 0 6px #24C6DC;
+				background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%);
+					@media #{$breakpoint-desktop-max} {
+						padding: 15px 80px;
+				    }
+				&:hover{
+					background-color: lighten($blue-btn, 15%);
 				}
 			}
 		}
